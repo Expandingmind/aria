@@ -133,6 +133,9 @@ export default function Home() {
         {/* ───────────────── Give Claude a voice (narrative) ───────────────── */}
         <ClaudeVoiceNarrative />
 
+        {/* ───────────────── Mobile / Action Button (big point, high up) ───────────────── */}
+        <MobileShowcase />
+
         {/* ───────────────── Feature showcase ───────────────── */}
         <section id="features" className="mx-auto w-full max-w-6xl px-6 py-28">
           <Reveal className="mb-20 max-w-2xl">
@@ -146,11 +149,8 @@ export default function Home() {
           <FeatureShowcase />
         </section>
 
-        {/* ───────────────── Mobile / Action Button ───────────────── */}
-        <MobileShowcase />
-
         {/* ───────────────── Speed comparison ───────────────── */}
-        <section className="bg-beige-deep/30">
+        <section className="border-y border-ink/10 bg-beige-deep/70">
           <div className="mx-auto max-w-5xl px-6 py-28">
             <Reveal className="mb-14 text-center">
               <p className="tracking-luxe mb-4 text-xs uppercase text-green">
@@ -215,7 +215,7 @@ export default function Home() {
         </section>
 
         {/* ───────────────── Philosophy quote ───────────────── */}
-        <section className="bg-beige-deep/30">
+        <section className="border-y border-ink/10 bg-beige-deep/70">
           <div className="mx-auto max-w-4xl px-6 py-28 text-center">
             <Reveal>
               <p className="font-display text-3xl font-light italic leading-snug sm:text-[2.6rem]">
@@ -241,17 +241,18 @@ export default function Home() {
         </section>
 
         {/* ───────────────── CTA ───────────────── */}
-        <section id="access" className="relative overflow-hidden px-6 py-32">
+        <section id="access" className="relative overflow-hidden bg-green px-6 py-36 text-beige">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 blur-3xl"
-            style={{ background: "radial-gradient(circle, var(--green-tint) 0%, transparent 65%)" }}
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[560px] w-[680px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-3xl"
+            style={{ background: "radial-gradient(circle, var(--green-pale) 0%, transparent 65%)" }}
           />
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <h2 className="font-display text-4xl font-light leading-tight sm:text-6xl">
-              Be among the first to <em className="italic text-green">speak</em>.
+          <Reveal className="relative mx-auto max-w-2xl text-center">
+            <h2 className="font-display text-4xl font-light leading-tight text-beige sm:text-6xl">
+              Be among the first to{" "}
+              <em className="italic text-green-pale">speak</em>.
             </h2>
-            <p className="mx-auto mt-6 max-w-lg text-lg text-ink-soft">
+            <p className="mx-auto mt-6 max-w-lg text-lg text-beige/70">
               Aria is in private development. Leave your email and we&apos;ll
               reach out when your voice can join the conversation.
             </p>
@@ -264,17 +265,16 @@ export default function Home() {
                 type="email"
                 required
                 placeholder="you@example.com"
-                className="w-full rounded-full border border-ink/15 bg-beige px-6 py-3.5 text-sm outline-none transition-colors placeholder:text-ink/40 focus:border-green"
+                className="w-full rounded-full border border-beige/25 bg-beige/95 px-6 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-ink/40 focus:border-beige"
               />
               <button
                 type="submit"
-                className="group relative overflow-hidden whitespace-nowrap rounded-full bg-ink px-7 py-3.5 text-sm text-beige transition-transform hover:-translate-y-0.5"
+                className="whitespace-nowrap rounded-full bg-beige px-7 py-3.5 text-sm font-medium text-green-deep transition-all hover:-translate-y-0.5 hover:bg-green-pale"
               >
-                <span className="relative z-10">Request access</span>
-                <span className="absolute inset-0 -translate-x-full bg-green transition-transform duration-500 group-hover:translate-x-0" />
+                Request access
               </button>
             </form>
-            <p className="mt-4 text-xs text-ink/40">
+            <p className="mt-4 text-xs text-beige/50">
               No spam. Just a note when Aria is ready to listen.
             </p>
           </Reveal>

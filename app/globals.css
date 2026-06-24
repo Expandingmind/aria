@@ -9,7 +9,9 @@
 
   /* Green — the one accent. Deep forest green à la Reserve Padel. */
   --green: #1f3d2b; /* deep forest / bottle green — primary accent */
+  --green-deep: #16301f; /* darker forest, for layered dark-green surfaces */
   --green-bright: #7ea668; /* lighter sage, for accents on dark surfaces */
+  --green-pale: #cfe0bd; /* pale green text/emphasis on dark-green surfaces */
   --green-tint: #e3ebdb; /* whisper of green for surfaces */
 
   --background: var(--beige);
@@ -24,7 +26,9 @@
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-green: var(--green);
+  --color-green-deep: var(--green-deep);
   --color-green-bright: var(--green-bright);
+  --color-green-pale: var(--green-pale);
   --color-green-tint: var(--green-tint);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);

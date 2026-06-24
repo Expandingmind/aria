@@ -19,23 +19,23 @@ type Phase = (typeof SEQ)[number]["phase"];
 
 export function MobileShowcase() {
   return (
-    <section className="relative overflow-hidden bg-ink text-beige">
+    <section className="relative overflow-hidden bg-green text-beige">
       <div
         aria-hidden
-        className="pointer-events-none absolute right-0 top-0 -z-0 h-[600px] w-[600px] translate-x-1/3 -translate-y-1/4 rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--green-bright) 0%, transparent 60%)" }}
+        className="pointer-events-none absolute right-0 top-0 -z-0 h-[600px] w-[600px] translate-x-1/3 -translate-y-1/4 rounded-full opacity-25 blur-3xl"
+        style={{ background: "radial-gradient(circle, var(--green-pale) 0%, transparent 60%)" }}
       />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 py-28 lg:grid-cols-2 lg:gap-8">
         {/* copy */}
         <Reveal>
-          <p className="tracking-luxe mb-4 text-xs uppercase text-green-bright">
+          <p className="tracking-luxe mb-4 text-xs uppercase text-green-pale">
             In your pocket
           </p>
           <h2 className="font-display text-4xl font-light leading-tight text-beige sm:text-[3.2rem]">
             One tap on your iPhone.
             <br />
-            <span className="italic text-green-bright">Claude speaks back.</span>
+            <span className="italic text-green-pale">Claude speaks back.</span>
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-beige/65">
             Map Aria to your iPhone&rsquo;s Action Button. Press it anywhere —
@@ -48,7 +48,7 @@ export function MobileShowcase() {
             {STEPS.map((s, i) => (
               <Reveal key={s.t} delay={i * 0.1}>
                 <li className="flex items-start gap-4">
-                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-green-bright/40 text-sm text-green-bright">
+                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-green-pale/40 text-sm text-green-pale">
                     {i + 1}
                   </span>
                   <div>
@@ -93,8 +93,8 @@ function Phone() {
       {/* Action Button callout */}
       <div className="absolute -left-4 top-[120px] z-20 flex items-center">
         <div className="-ml-28 hidden text-right sm:block">
-          <p className="text-xs font-medium text-green-bright">Action Button</p>
-          <p className="text-[11px] text-beige/40">Press to talk</p>
+          <p className="text-xs font-medium text-green-pale">Action Button</p>
+          <p className="text-[11px] text-beige/50">Press to talk</p>
         </div>
         <span className="ml-2 hidden h-px w-8 bg-beige/30 sm:block" />
       </div>
