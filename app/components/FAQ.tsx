@@ -15,6 +15,10 @@ const ITEMS = [
     a: "You talk, Aria transcribes you in real time, reasons over what you said with the full context of your memory and contacts, and replies out loud. It's a real back-and-forth conversation rather than a wall of text.",
   },
   {
+    q: "How does it work on my iPhone?",
+    a: "Map Aria to your iPhone's Action Button. A single press starts listening anywhere — no app to open. Aria taps into the context of your existing chat, so it already knows what you know, then answers out loud. It's the fastest way to talk to Claude on the go.",
+  },
+  {
     q: "What does Aria remember?",
     a: "Your projects, your preferences, the threads of past conversations, and the people you introduce it to. You stay in control of what's stored, and you can review or remove memories at any time.",
   },

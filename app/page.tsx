@@ -11,6 +11,8 @@ import { Marquee } from "./components/Marquee";
 import { FeatureShowcase } from "./components/FeatureShowcase";
 import { UseCases } from "./components/UseCases";
 import { FAQ } from "./components/FAQ";
+import { ClaudeVoiceNarrative } from "./components/ClaudeVoiceNarrative";
+import { MobileShowcase } from "./components/MobileShowcase";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -128,18 +130,8 @@ export default function Home() {
         {/* ───────────────── Marquee ───────────────── */}
         <Marquee />
 
-        {/* ───────────────── Philosophy ───────────────── */}
-        <section id="philosophy" className="bg-beige-deep/30">
-          <div className="mx-auto max-w-4xl px-6 py-28 text-center">
-            <Reveal>
-              <p className="font-display text-3xl font-light italic leading-snug sm:text-[2.6rem]">
-                The most natural interface was never a screen.
-                <br />
-                <span className="text-green">It was always the voice.</span>
-              </p>
-            </Reveal>
-          </div>
-        </section>
+        {/* ───────────────── Give Claude a voice (narrative) ───────────────── */}
+        <ClaudeVoiceNarrative />
 
         {/* ───────────────── Feature showcase ───────────────── */}
         <section id="features" className="mx-auto w-full max-w-6xl px-6 py-28">
@@ -153,6 +145,9 @@ export default function Home() {
           </Reveal>
           <FeatureShowcase />
         </section>
+
+        {/* ───────────────── Mobile / Action Button ───────────────── */}
+        <MobileShowcase />
 
         {/* ───────────────── Speed comparison ───────────────── */}
         <section className="bg-beige-deep/30">
@@ -216,6 +211,19 @@ export default function Home() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ───────────────── Philosophy quote ───────────────── */}
+        <section className="bg-beige-deep/30">
+          <div className="mx-auto max-w-4xl px-6 py-28 text-center">
+            <Reveal>
+              <p className="font-display text-3xl font-light italic leading-snug sm:text-[2.6rem]">
+                The most natural interface was never a screen.
+                <br />
+                <span className="text-green">It was always the voice.</span>
+              </p>
+            </Reveal>
           </div>
         </section>
 
