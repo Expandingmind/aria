@@ -10,7 +10,7 @@ export function Waveform({ className }: { className?: string }) {
     <div
       className={className}
       aria-hidden
-      style={{ display: "flex", alignItems: "center", gap: "4px", height: 96 }}
+      style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", gap: "4px", height: 96 }}
     >
       {Array.from({ length: BARS }).map((_, i) => {
         // a gentle bell curve so the centre bars are tallest
