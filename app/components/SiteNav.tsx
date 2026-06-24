@@ -51,6 +51,9 @@ export function SiteNav() {
             <Link href="/#faq" className="link-underline">
               FAQ
             </Link>
+            <Link href="/talk" className="link-underline text-green">
+              Try it
+            </Link>
           </nav>
 
           <Link
