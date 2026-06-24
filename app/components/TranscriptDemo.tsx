@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { AriaMark } from "./AriaMark";
 
 // A looping "conversation" that types itself out — you speak, Aria answers.
 const TURNS = [
@@ -43,10 +44,10 @@ export function TranscriptDemo() {
     <div className="w-full max-w-md rounded-[28px] border border-ink/10 bg-beige/70 p-6 shadow-[0_30px_80px_-40px_rgba(20,20,15,0.45)] backdrop-blur-xl">
       {/* status row */}
       <div className="flex items-center gap-3 border-b border-ink/10 pb-4">
-        <span className="relative grid h-9 w-9 place-items-center rounded-full bg-ink">
-          <span className="h-2.5 w-2.5 rounded-full bg-green-bright" />
+        <span className="relative grid h-9 w-9 place-items-center">
+          <AriaMark size={34} />
           <motion.span
-            className="absolute inset-0 rounded-full border border-green-bright"
+            className="absolute inset-0 rounded-full border border-green"
             animate={{ scale: [1, 1.6], opacity: [0.6, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeOut" }}
           />
