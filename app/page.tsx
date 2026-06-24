@@ -127,14 +127,41 @@ export default function Home() {
           </motion.div>
         </section>
 
+        {/* ───────────────── Mobile / Action Button (right under hero) ───────────────── */}
+        <MobileShowcase />
+
+        {/* ───────────────── How it works (green — transition target) ───────────────── */}
+        <section id="how" className="bg-green text-beige">
+          <div className="mx-auto max-w-6xl px-6 py-28">
+            <Reveal>
+              <p className="tracking-luxe mb-4 text-xs uppercase text-green-pale">
+                How it works
+              </p>
+              <h2 className="max-w-2xl font-display text-4xl font-light leading-tight text-beige sm:text-5xl">
+                Speak. It thinks. You hear it back.
+              </h2>
+            </Reveal>
+
+            <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-beige/15 bg-beige/15 md:grid-cols-3">
+              {STEPS.map((s, i) => (
+                <Reveal key={s.n} delay={i * 0.12}>
+                  <div className="flex h-full flex-col bg-green p-9">
+                    <span className="font-display text-5xl font-light text-green-pale">
+                      {s.n}
+                    </span>
+                    <h3 className="mt-6 text-xl font-medium text-beige">{s.title}</h3>
+                    <p className="mt-3 text-[15px] leading-relaxed text-beige/65">
+                      {s.body}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ───────────────── Marquee ───────────────── */}
         <Marquee />
-
-        {/* ───────────────── Give Claude a voice (narrative) ───────────────── */}
-        <ClaudeVoiceNarrative />
-
-        {/* ───────────────── Mobile / Action Button (big point, high up) ───────────────── */}
-        <MobileShowcase />
 
         {/* ───────────────── Feature showcase ───────────────── */}
         <section id="features" className="mx-auto w-full max-w-6xl px-6 py-28">
@@ -184,36 +211,6 @@ export default function Home() {
           <UseCases />
         </section>
 
-        {/* ───────────────── How it works ───────────────── */}
-        <section id="how" className="bg-ink text-beige">
-          <div className="mx-auto max-w-6xl px-6 py-28">
-            <Reveal>
-              <p className="tracking-luxe mb-4 text-xs uppercase text-green-bright">
-                How it works
-              </p>
-              <h2 className="max-w-2xl font-display text-4xl font-light leading-tight text-beige sm:text-5xl">
-                Speak. It thinks. You hear it back.
-              </h2>
-            </Reveal>
-
-            <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-beige/10 bg-beige/10 md:grid-cols-3">
-              {STEPS.map((s, i) => (
-                <Reveal key={s.n} delay={i * 0.12}>
-                  <div className="flex h-full flex-col bg-ink p-9">
-                    <span className="font-display text-5xl font-light text-green-bright">
-                      {s.n}
-                    </span>
-                    <h3 className="mt-6 text-xl font-medium text-beige">{s.title}</h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-beige/60">
-                      {s.body}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ───────────────── Philosophy quote ───────────────── */}
         <section className="border-y border-ink/10 bg-beige-deep/70">
           <div className="mx-auto max-w-4xl px-6 py-28 text-center">
@@ -239,6 +236,9 @@ export default function Home() {
           </Reveal>
           <FAQ />
         </section>
+
+        {/* ───────────────── Give Claude a voice (closer, bottom) ───────────────── */}
+        <ClaudeVoiceNarrative />
 
         {/* ───────────────── CTA ───────────────── */}
         <section id="access" className="relative overflow-hidden bg-green px-6 py-36 text-beige">

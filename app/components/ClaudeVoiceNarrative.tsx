@@ -4,27 +4,24 @@ import { motion } from "framer-motion";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const LINES = [
-  { text: "You pour everything into Claude.", muted: false },
-  { text: "It has a brain.", muted: false },
-];
+const LINES = ["You pour everything into Claude.", "It has a brain."];
 
 export function ClaudeVoiceNarrative() {
   return (
-    <section id="philosophy" className="relative overflow-hidden px-6 py-32">
+    <section id="philosophy" className="relative overflow-hidden bg-ink px-6 py-36 text-beige">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[600px] w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-50 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--green-tint) 0%, transparent 65%)" }}
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[560px] w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-3xl"
+        style={{ background: "radial-gradient(circle, var(--green-bright) 0%, transparent 65%)" }}
       />
 
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="relative mx-auto max-w-3xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="tracking-luxe mb-8 text-xs uppercase text-green"
+          className="tracking-luxe mb-8 text-xs uppercase text-green-bright"
         >
           The missing piece
         </motion.p>
@@ -32,18 +29,18 @@ export function ClaudeVoiceNarrative() {
         <h2 className="font-display text-4xl font-light leading-[1.1] sm:text-6xl">
           {LINES.map((l, i) => (
             <motion.span
-              key={l.text}
-              className="block text-ink"
+              key={l}
+              className="block text-beige"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.9, ease: EASE, delay: i * 0.15 }}
             >
-              {l.text}
+              {l}
             </motion.span>
           ))}
           <motion.span
-            className="mt-2 block italic text-green"
+            className="mt-2 block italic text-green-bright"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -58,7 +55,7 @@ export function ClaudeVoiceNarrative() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: EASE, delay: 0.55 }}
-          className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-ink-soft"
+          className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-beige/65"
         >
           We spend hours typing our thoughts into Claude — and it thinks back
           brilliantly. But it has never been able to speak. Aria blends those two
@@ -68,9 +65,9 @@ export function ClaudeVoiceNarrative() {
         {/* type → voice transformation band */}
         <div className="mx-auto mt-16 max-w-2xl">
           <TypeToVoice />
-          <div className="mt-4 flex justify-between text-xs text-ink/40">
-            <span>Typed thought</span>
-            <span className="text-green">Spoken with Aria</span>
+          <div className="mt-4 flex justify-between text-xs">
+            <span className="text-beige/40">Typed thought</span>
+            <span className="text-green-bright">Spoken with Aria</span>
           </div>
         </div>
       </div>
@@ -91,8 +88,8 @@ function TypeToVoice() {
         return isVoice ? (
           <motion.span
             key={i}
-            className="w-[3px] rounded-full bg-green"
-            style={{ opacity: 0.35 + Math.max(0, bell) * 0.6 }}
+            className="w-[3px] rounded-full bg-green-bright"
+            style={{ opacity: 0.4 + Math.max(0, bell) * 0.6 }}
             animate={{ height: [voiceH, voiceH + 16, voiceH] }}
             transition={{
               duration: 1.3 + (i % 4) * 0.18,
@@ -104,7 +101,7 @@ function TypeToVoice() {
         ) : (
           <span
             key={i}
-            className="w-[3px] rounded-full bg-ink/25"
+            className="w-[3px] rounded-full bg-beige/25"
             style={{ height: 6 }}
           />
         );

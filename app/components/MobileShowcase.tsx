@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
+import { AriaMark } from "./AriaMark";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -12,48 +13,48 @@ const SEQ = [
   { phase: "press", dur: 850 },
   { phase: "listen", dur: 2300 },
   { phase: "think", dur: 900 },
-  { phase: "speak", dur: 3200 },
+  { phase: "speak", dur: 3400 },
 ] as const;
 
 type Phase = (typeof SEQ)[number]["phase"];
 
 export function MobileShowcase() {
   return (
-    <section className="relative overflow-hidden bg-green text-beige">
+    <section className="relative overflow-hidden bg-beige">
       <div
         aria-hidden
-        className="pointer-events-none absolute right-0 top-0 -z-0 h-[600px] w-[600px] translate-x-1/3 -translate-y-1/4 rounded-full opacity-25 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--green-pale) 0%, transparent 60%)" }}
+        className="pointer-events-none absolute left-1/2 top-1/3 -z-0 h-[560px] w-[680px] -translate-x-1/2 rounded-full opacity-60 blur-3xl"
+        style={{ background: "radial-gradient(circle, var(--green-tint) 0%, transparent 65%)" }}
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 py-28 lg:grid-cols-2 lg:gap-8">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 pb-44 pt-28 lg:grid-cols-2 lg:gap-8">
         {/* copy */}
         <Reveal>
-          <p className="tracking-luxe mb-4 text-xs uppercase text-green-pale">
+          <p className="tracking-luxe mb-4 text-xs uppercase text-green">
             In your pocket
           </p>
-          <h2 className="font-display text-4xl font-light leading-tight text-beige sm:text-[3.2rem]">
+          <h2 className="font-display text-4xl font-light leading-tight text-ink sm:text-[3.2rem]">
             One tap on your iPhone.
             <br />
-            <span className="italic text-green-pale">Claude speaks back.</span>
+            <span className="italic text-green">Claude speaks back.</span>
           </h2>
-          <p className="mt-6 max-w-md text-[15px] leading-relaxed text-beige/65">
+          <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink-soft">
             Map Aria to your iPhone&rsquo;s Action Button. Press it anywhere —
-            walking, driving, between meetings — and start talking. Aria taps
-            straight into the context of your chat, so it already knows what you
-            know, and answers out loud.
+            in the car, between meetings, walking out the door — and just talk.
+            Aria taps into the context of your chat, so it already knows your
+            business, and answers out loud: concise, clear, straight to the point.
           </p>
 
           <ul className="mt-9 space-y-4">
             {STEPS.map((s, i) => (
               <Reveal key={s.t} delay={i * 0.1}>
                 <li className="flex items-start gap-4">
-                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-green-pale/40 text-sm text-green-pale">
+                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-green/30 text-sm text-green">
                     {i + 1}
                   </span>
                   <div>
-                    <p className="font-medium text-beige">{s.t}</p>
-                    <p className="text-sm text-beige/55">{s.d}</p>
+                    <p className="font-medium text-ink">{s.t}</p>
+                    <p className="text-sm text-ink/50">{s.d}</p>
                   </div>
                 </li>
               </Reveal>
@@ -66,6 +67,13 @@ export function MobileShowcase() {
           <Phone />
         </Reveal>
       </div>
+
+      {/* transition into the green section below */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-48"
+        style={{ background: "linear-gradient(to bottom, transparent, var(--green))" }}
+      />
     </section>
   );
 }
@@ -93,10 +101,10 @@ function Phone() {
       {/* Action Button callout */}
       <div className="absolute -left-4 top-[120px] z-20 flex items-center">
         <div className="-ml-28 hidden text-right sm:block">
-          <p className="text-xs font-medium text-green-pale">Action Button</p>
-          <p className="text-[11px] text-beige/50">Press to talk</p>
+          <p className="text-xs font-medium text-green">Action Button</p>
+          <p className="text-[11px] text-ink/50">Press to talk</p>
         </div>
-        <span className="ml-2 hidden h-px w-8 bg-beige/30 sm:block" />
+        <span className="ml-2 hidden h-px w-8 bg-ink/30 sm:block" />
       </div>
 
       {/* physical action button */}
@@ -108,7 +116,7 @@ function Phone() {
       />
 
       {/* phone body */}
-      <div className="relative h-[600px] w-[290px] rounded-[3.2rem] border-[3px] border-[#2a2a24] bg-[#0b0b08] p-3 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)]">
+      <div className="relative h-[600px] w-[290px] rounded-[3.2rem] border-[3px] border-[#2a2a24] bg-[#0b0b08] p-3 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.55)]">
         {/* screen */}
         <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[2.6rem] bg-beige">
           {/* press ripple */}
@@ -126,8 +134,8 @@ function Phone() {
 
           {/* dynamic island */}
           <div className="relative z-10 flex justify-center pt-3">
-            <div className="flex h-7 items-center gap-2 rounded-full bg-ink px-4">
-              <span className="h-1.5 w-1.5 rounded-full bg-green-bright" />
+            <div className="flex h-7 items-center gap-1.5 rounded-full bg-ink px-3">
+              <AriaMark size={14} />
               <span className="text-[10px] text-beige/70">Aria</span>
             </div>
           </div>
@@ -136,7 +144,8 @@ function Phone() {
           <div className="flex flex-1 flex-col gap-2.5 overflow-hidden px-4 pt-5">
             {/* persistent context message */}
             <Bubble side="left">
-              Your launch is set for <b>Thursday</b>. You owe Maya the final copy.
+              Revenue&rsquo;s up <b>12%</b> this week. The Acme and Lumen deals
+              are stalled.
             </Bubble>
 
             <AnimatePresence mode="wait">
@@ -149,7 +158,7 @@ function Phone() {
                   transition={{ duration: 0.35 }}
                   className="self-end"
                 >
-                  <Bubble side="right">What did I promise Maya?</Bubble>
+                  <Bubble side="right">What needs my attention today?</Bubble>
                 </motion.div>
               )}
 
@@ -181,7 +190,7 @@ function Phone() {
                   transition={{ duration: 0.4 }}
                   className="self-start"
                 >
-                  <div className="max-w-[80%] rounded-2xl rounded-bl-md bg-green px-4 py-3 text-[13px] leading-snug text-beige">
+                  <div className="max-w-[82%] rounded-2xl rounded-bl-md bg-green px-4 py-3 text-[13px] leading-snug text-beige">
                     <div className="mb-2 flex items-center gap-2 text-beige/80">
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M11 5 6 9H2v6h4l5 4V5Z" />
@@ -198,7 +207,8 @@ function Phone() {
                         ))}
                       </span>
                     </div>
-                    The final copy, by Thursday. Want me to draft it now?
+                    Close Acme before Friday, then send the investor update.
+                    Start there.
                   </div>
                 </motion.div>
               )}
@@ -261,5 +271,5 @@ const STEPS = [
   { t: "Set it once", d: "Assign Aria to your Action Button in iPhone Settings." },
   { t: "Press anywhere", d: "A single press starts listening — no app to open." },
   { t: "It already knows", d: "Aria pulls in the context of your chat with Claude." },
-  { t: "Hear it back", d: "The answer returns in a natural, spoken voice." },
+  { t: "Hear it back", d: "A clear, concise answer, spoken out loud." },
 ];

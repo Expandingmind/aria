@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AriaMark } from "./AriaMark";
 
 const COLS = [
   {
@@ -33,9 +34,7 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2.5">
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-ink">
-                <span className="h-2 w-2 rounded-full bg-green-bright" />
-              </span>
+              <AriaMark size={30} />
               <span className="font-display text-2xl font-medium">Aria</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
