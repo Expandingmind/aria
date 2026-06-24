@@ -4,8 +4,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AriaMark } from "../components/AriaMark";
+import { demoReply } from "./demoBrain";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
+
+// Free, keyless demo brain (no Claude cost). Flip to false to use real Claude
+// via /api/chat once ANTHROPIC_API_KEY is set.
+const DEMO_MODE = true;
 
 type Turn = { role: "user" | "assistant"; content: string };
 type Phase = "idle" | "listening" | "thinking" | "speaking" | "error";
@@ -93,6 +98,16 @@ export default function TalkPage() {
       const next = [...turnsRef.current, { role: "user" as const, content: text }];
       setTurns(next);
       setPhase("thinking");
+
+      // Free, keyless demo brain — no LLM call, no cost.
+      if (DEMO_MODE) {
+        const reply = demoReply(text, turnsRef.current);
+        await new Promise((r) => setTimeout(r, 550)); // brief "thinking" beat
+        setTurns((t) => [...t, { role: "assistant", content: reply }]);
+        await speak(reply);
+        return;
+      }
+
       try {
         const res = await fetch("/api/chat", {
           method: "POST",
@@ -177,9 +192,12 @@ export default function TalkPage() {
                 Talk to <em className="italic text-green">Aria</em>.
               </h1>
               <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-ink-soft">
-                Tap the orb, speak, and hear Claude answer out loud — concise and
+                Tap the orb, speak, and hear Aria answer out loud — concise and
                 straight to the point.
               </p>
+              <span className="mt-6 inline-block rounded-full border border-ink/15 px-4 py-1.5 text-xs text-ink/50">
+                Demo · scripted replies, real voice
+              </span>
             </div>
           )}
 
