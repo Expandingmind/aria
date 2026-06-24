@@ -7,10 +7,10 @@
   --ink: #14140f; /* black — tertiary, used for text & accents */
   --ink-soft: #3a382f; /* softened ink for body copy */
 
-  /* Light green — the one accent */
-  --green: #8ba36f; /* refined sage */
-  --green-bright: #a6c285; /* lighter, livelier green */
-  --green-tint: #e7eed9; /* whisper of green for surfaces */
+  /* Green — the one accent. Deep forest green à la Reserve Padel. */
+  --green: #1f3d2b; /* deep forest / bottle green — primary accent */
+  --green-bright: #7ea668; /* lighter sage, for accents on dark surfaces */
+  --green-tint: #e3ebdb; /* whisper of green for surfaces */
 
   --background: var(--beige);
   --foreground: var(--ink);
