@@ -8,7 +8,8 @@
   --ink-soft: #3a382f; /* softened ink for body copy */
 
   /* Green — the one accent. Deep forest green à la Reserve Padel. */
-  --green: #1f3d2b; /* deep forest / bottle green — primary accent */
+  --green: #1f3d2b; /* deep forest / bottle green, primary accent */
+  --green-mid: #2f5a40; /* a lighter forest green, for large surfaces */
   --green-deep: #16301f; /* darker forest, for layered dark-green surfaces */
   --green-bright: #7ea668; /* lighter sage, for accents on dark surfaces */
   --green-pale: #cfe0bd; /* pale green text/emphasis on dark-green surfaces */
@@ -26,6 +27,7 @@
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-green: var(--green);
+  --color-green-mid: var(--green-mid);
   --color-green-deep: var(--green-deep);
   --color-green-bright: var(--green-bright);
   --color-green-pale: var(--green-pale);
@@ -48,6 +50,13 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Guard against any element forcing horizontal scroll on mobile. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Subtle paper grain over the beige for a premium tactile feel */

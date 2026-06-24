@@ -10,7 +10,7 @@ const TABS = [
     id: "founders",
     label: "Founders",
     headline: "Think out loud, decide faster.",
-    body: "Pace the room and talk through the hard calls. Aria keeps the thread of every decision, every investor, every open loop — so nothing slips between the cracks.",
+    body: "Pace the room and talk through the hard calls. Aria keeps the thread of every decision, every investor, every open loop, so nothing slips between the cracks.",
     points: ["Recall any past decision", "Briefs before every call", "Never re-explain context"],
   },
   {
@@ -24,7 +24,7 @@ const TABS = [
     id: "professionals",
     label: "Busy professionals",
     headline: "A second mind for your day.",
-    body: "Between meetings, in the car, on a walk — just talk. Aria knows your people and your priorities, and answers in a calm voice you can listen to anywhere.",
+    body: "Between meetings, in the car, on a walk, just talk. Aria knows your people and your priorities, and answers in a calm voice you can listen to anywhere.",
     points: ["Hands-free, eyes-free", "Knows who's who", "Always has the context"],
   },
   {

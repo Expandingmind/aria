@@ -192,7 +192,7 @@ export default function TalkPage() {
                 Talk to <em className="italic text-green">Aria</em>.
               </h1>
               <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-ink-soft">
-                Tap the orb, speak, and hear Aria answer out loud — concise and
+                Tap the orb, speak, and hear Aria answer out loud, concise and
                 straight to the point.
               </p>
               <span className="mt-6 inline-block rounded-full border border-ink/15 px-4 py-1.5 text-xs text-ink/50">

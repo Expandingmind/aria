@@ -16,7 +16,7 @@ const ITEMS = [
   },
   {
     q: "How does it work on my iPhone?",
-    a: "Map Aria to your iPhone's Action Button. A single press starts listening anywhere — no app to open. Aria taps into the context of your existing chat, so it already knows what you know, then answers out loud. It's the fastest way to talk to Claude on the go.",
+    a: "Map Aria to your iPhone's Action Button. A single press starts listening anywhere, with no app to open. Aria taps into the context of your existing chat, so it already knows what you know, then answers out loud. It's the fastest way to talk to Claude on the go.",
   },
   {
     q: "What does Aria remember?",

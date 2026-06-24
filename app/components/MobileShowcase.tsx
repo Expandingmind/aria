@@ -39,10 +39,10 @@ export function MobileShowcase() {
             <span className="italic text-green-pale">Claude speaks back.</span>
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-beige/65">
-            Map Aria to your iPhone&rsquo;s Action Button. Press it anywhere —
-            in the car, between meetings, walking out the door — and just talk.
-            Aria taps into the context of your chat, so it already knows your
-            business, and answers out loud: concise, clear, straight to the point.
+            Map Aria to your iPhone&rsquo;s Action Button. Press it anywhere. In
+            the car, between meetings, walking out the door, and just talk. Aria
+            taps into the context of your chat, so it already knows your business,
+            and answers out loud: concise, clear, straight to the point.
           </p>
 
           <ul className="mt-9 space-y-4">
@@ -262,7 +262,7 @@ function Bubble({
 
 const STEPS = [
   { t: "Set it once", d: "Assign Aria to your Action Button in iPhone Settings." },
-  { t: "Press anywhere", d: "A single press starts listening — no app to open." },
+  { t: "Press anywhere", d: "A single press starts listening, no app to open." },
   { t: "It already knows", d: "Aria pulls in the context of your chat with Claude." },
   { t: "Hear it back", d: "A clear, concise answer, spoken out loud." },
 ];

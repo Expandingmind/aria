@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalShell, Section } from "../components/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Aria",
+  title: "Terms of Service · Aria",
   description: "The terms that govern your use of Aria.",
 };
 

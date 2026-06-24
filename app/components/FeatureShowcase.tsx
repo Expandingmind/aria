@@ -12,7 +12,7 @@ export function FeatureShowcase() {
       <Row
         eyebrow="Voice"
         title="A voice that listens, and answers."
-        body="Talk the way you'd talk to a person — ramble, pause, change your mind. Aria hears you clearly, holds the thread, and replies out loud in a calm, natural voice you can listen to anywhere."
+        body="Talk the way you'd talk to a person. Ramble, pause, change your mind. Aria hears you clearly, holds the thread, and replies out loud in a calm, natural voice you can listen to anywhere."
         visual={<VoiceVisual />}
       />
 
@@ -21,7 +21,7 @@ export function FeatureShowcase() {
         reverse
         eyebrow="Memory"
         title="Memory that actually lasts."
-        body="Your projects, your preferences, the threads of past conversations — Aria keeps them all and brings them forward exactly when they matter. You never start from zero again."
+        body="Your projects, your preferences, the threads of past conversations. Aria keeps them all and brings them forward exactly when they matter. You never start from zero again."
         visual={<MemoryVisual />}
       />
 
@@ -29,7 +29,7 @@ export function FeatureShowcase() {
       <Row
         eyebrow="Contacts"
         title="It knows the people in your world."
-        body="Introduce Aria to the people who matter and it keeps the context on who's who. A name is enough — no re-explaining relationships, history, or what you owe whom."
+        body="Introduce Aria to the people who matter and it keeps the context on who's who. A name is enough. No re-explaining relationships, history, or what you owe whom."
         visual={<ContactsVisual />}
       />
     </div>

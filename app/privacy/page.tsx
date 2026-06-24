@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalShell, Section } from "../components/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Aria",
+  title: "Privacy Policy · Aria",
   description: "How Aria collects, uses, and protects your data.",
 };
 
@@ -19,19 +19,19 @@ export default function PrivacyPage() {
       <Section heading="1. Information we collect">
         <ul className="ml-5 list-disc space-y-2">
           <li>
-            <strong>Account information</strong> — such as your email address when
+            <strong>Account information:</strong> such as your email address when
             you request access.
           </li>
           <li>
-            <strong>Voice &amp; conversation data</strong> — audio you choose to
+            <strong>Voice &amp; conversation data:</strong> audio you choose to
             send, its transcripts, and Aria&rsquo;s responses.
           </li>
           <li>
-            <strong>Memory &amp; contacts</strong> — the notes, preferences, and
+            <strong>Memory &amp; contacts:</strong> the notes, preferences, and
             people you ask Aria to remember.
           </li>
           <li>
-            <strong>Usage data</strong> — basic, privacy-respecting analytics about
+            <strong>Usage data:</strong> basic, privacy-respecting analytics about
             how the Service is used and performs.
           </li>
         </ul>

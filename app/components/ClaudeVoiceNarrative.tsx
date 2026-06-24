@@ -57,7 +57,7 @@ export function ClaudeVoiceNarrative() {
           transition={{ duration: 0.9, ease: EASE, delay: 0.55 }}
           className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-beige/65"
         >
-          We spend hours typing our thoughts into Claude — and it thinks back
+          We spend hours typing our thoughts into Claude, and it thinks back
           brilliantly. But it has never been able to speak. Aria blends those two
           worlds, so the intelligence you already trust can finally talk with you.
         </motion.p>

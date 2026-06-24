@@ -15,11 +15,11 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aria — Give Claude a voice",
+  title: "Aria: Give Claude a voice",
   description:
     "Aria is a voice-first AI agent with memory and contacts. Speak naturally, and hear it think back. A calmer, more human way to work with intelligence.",
   openGraph: {
-    title: "Aria — Give Claude a voice",
+    title: "Aria: Give Claude a voice",
     description:
       "A voice-first AI agent with memory and contacts. Speak naturally, and hear it think back.",
     type: "website",

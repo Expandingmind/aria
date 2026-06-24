@@ -10,14 +10,14 @@ const RULES: Rule[] = [
   {
     match: /\b(hi|hey|hello|yo|good morning|good evening)\b/i,
     replies: [
-      "Hey — I'm Aria. What's on your plate today?",
+      "Hey, I'm Aria. What's on your plate today?",
       "Hey. What do you need? Keep it quick and I'll keep up.",
     ],
   },
   {
     match: /\b(who are you|what are you|what can you (do|help))\b/i,
     replies: [
-      "I'm Aria — I give Claude a voice. You talk, I answer out loud: concise, no fluff.",
+      "I'm Aria. I give Claude a voice. You talk, I answer out loud: concise, no fluff.",
     ],
   },
   {
@@ -28,7 +28,7 @@ const RULES: Rule[] = [
     match: /\b(focus|today|priorit|what should i|to[- ]?do|get done)\b/i,
     replies: [
       "Three things: close your top deal, ship the thing you keep postponing, and reply to the person you're avoiding. Want me to break down the first one?",
-      "Pick the one move that actually changes the week — and do it before lunch. The rest can wait.",
+      "Pick the one move that actually changes the week, and do it before lunch. The rest can wait.",
     ],
   },
   {
@@ -49,13 +49,13 @@ const RULES: Rule[] = [
     match: /\b(deal|close|client|customer|prospect)\b/i,
     replies: [
       "What's the one objection in the way? Handle that and the deal usually moves.",
-      "Get them to the next concrete step today — a call, a doc, a yes. Don't let it cool.",
+      "Get them to the next concrete step today: a call, a doc, a yes. Don't let it cool.",
     ],
   },
   {
     match: /\b(remind|remember|note|don'?t forget)\b/i,
     replies: [
-      "Got it — I'll keep that in mind. What's the deadline?",
+      "Got it. I'll keep that in mind. What's the deadline?",
       "Noted. Want me to surface it the next time it's relevant?",
     ],
   },
@@ -83,7 +83,7 @@ const RULES: Rule[] = [
     match: /\b(stressed|overwhelm|tired|burn(ed)?[- ]?out|too much|busy)\b/i,
     replies: [
       "One thing at a time. What's the single most important thing right now? Start there.",
-      "Breathe. Name the one fire that actually matters today — ignore the rest for an hour.",
+      "Breathe. Name the one fire that actually matters today, then ignore the rest for an hour.",
     ],
   },
   {
@@ -95,7 +95,7 @@ const RULES: Rule[] = [
 const FALLBACKS = [
   "Here's the short version: focus on the one move that matters most right now. Want me to help you pick it?",
   "Got it. What's the outcome you actually want here? Start from that and work back.",
-  "Say more in one line — what's the real goal? Then I'll keep it sharp.",
+  "Say more in one line. What's the real goal? Then I'll keep it sharp.",
   "Understood. The fastest path is usually the simplest one. What's stopping you?",
 ];
 
